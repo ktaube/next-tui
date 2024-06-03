@@ -1,0 +1,16 @@
+{
+  "name": "next-tui",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@types/react": "^18.3.3",
+    "ink": "^5.0.1",
+    "react": "^18.3.1"
+  }
+}

@@ -1,20 +1,8 @@
-import React, { useState, useEffect } from "react";
-import { render, Text } from "ink";
+import React from "react";
+import { App } from "./src/App.js";
+import { withFullScreen } from "./src/components/withFullScreen.js";
 
-const Counter = () => {
-  const [counter, setCounter] = useState(0);
+const ink = withFullScreen(<App />, { exitOnCtrlC: true });
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCounter((previousCounter) => previousCounter + 1);
-    }, 100);
-
-    return () => {
-      clearInterval(timer);
-    };
-  }, []);
-
-  return <Text color="green">{counter} tests passed</Text>;
-};
-
-render(<Counter />);
+ink.start();
+await ink.waitUntilExit();

@@ -2,8 +2,13 @@
   "name": "next-tui",
   "module": "index.ts",
   "type": "module",
+  "scripts": {
+    "dev": "node --loader ts-node/esm index.tsx",
+    "tsc:watch": "tsc --watch"
+  },
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "ts-node": "^10.9.2"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"

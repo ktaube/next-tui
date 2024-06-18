@@ -3,7 +3,7 @@
   "module": "index.ts",
   "type": "module",
   "scripts": {
-    "dev": "node --loader ts-node/esm index.tsx",
+    "dev": "NODE_NO_WARNINGS=1 node --loader ts-node/esm index.tsx -d ~/workspace/ktaube/ktdev/apps/eyeballs",
     "tsc:watch": "tsc --watch"
   },
   "devDependencies": {
